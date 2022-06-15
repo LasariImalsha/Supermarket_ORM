@@ -36,9 +36,10 @@ public class AppInitializer {
         Transaction transaction = session.beginTransaction();
         //session.save(i2);
         //session.update(i2);
-        //Customer c2 = session.get(Customer.class,"C002");
-        Item i2 = session.get(Item.class,"I002");
-        System.out.println(i2);
+        Customer c2 = session.get(Customer.class,"C002");
+        session.delete(c2);
+        //Item i2 = session.get(Item.class,"I002");
+        //System.out.println(i2);
         transaction.commit();
         session.close();
 
