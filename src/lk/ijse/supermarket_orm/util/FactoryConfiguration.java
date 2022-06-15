@@ -12,7 +12,7 @@ public class FactoryConfiguration {
     private SessionFactory sessionFactory;
 
     private FactoryConfiguration(){
-        Configuration configuration = new Configuration().configure().addAnnotatedClass(Customer.class);
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(Item.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }

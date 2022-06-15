@@ -13,11 +13,11 @@ public class AppInitializer {
         c1.setContact("071-4589624");
         c1.setAddress("Galle");*/
 
-        Customer c2 = new Customer();
+       /* Customer c2 = new Customer();
         c2.setId("C002");
         c2.setName("Amali");
         c2.setContact("075-4589624");
-        c2.setAddress("Panadura");
+        c2.setAddress("Panadura");*/
 
         /*Item i1 = new Item();
         i1.setCode("I001");
@@ -25,10 +25,17 @@ public class AppInitializer {
         i1.setUnitPrice(560.00);
         i1.setQty(1);*/
 
+        Item i2 = new Item();
+        i2.setCode("I002");
+        i2.setDescription("Anchor");
+        i2.setUnitPrice(1020);
+        i2.setQty(1);
+
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        //session.save(c2);
-        //session.update(c2);
+        //session.save(i2);
+        session.update(i2);
         transaction.commit();
         session.close();
 
