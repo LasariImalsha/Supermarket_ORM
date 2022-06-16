@@ -14,8 +14,8 @@ public class Item {
     private double unitPrice;
     private int qty;
 
-    @ManyToMany
-    private List<Order> orderList = new ArrayList<>();
+   @ManyToMany
+   private List<Order> orderList = new ArrayList<>();
 
     public Item() {
     }
@@ -41,7 +41,6 @@ public class Item {
     public void setQty(int qty) { this.qty = qty; }
 
     public List<Order> getOrderList() { return orderList; }
-
     public void setOrderList(List<Order> orderList) { this.orderList = orderList; }
 
     @Override
