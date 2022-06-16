@@ -21,7 +21,7 @@ public class AppInitializer {
         c2.setContact("075-4589624");
         c2.setAddress("Panadura");*/
 
-        Item i2 = new Item();
+       /* Item i2 = new Item();
         i2.setCode("I002");
         i2.setDescription("Soap");
         i2.setUnitPrice(90);
@@ -55,7 +55,7 @@ public class AppInitializer {
         i3.setOrderList(orderList);
 
         o1.setItemList(itemList);
-        o2.setItemList(itemList);
+        o2.setItemList(itemList);*/
 
 
         Session session = FactoryConfiguration.getInstance().getSession();
@@ -69,10 +69,10 @@ public class AppInitializer {
         session.delete(i2);
         System.out.println(i2);*/
 
-        session.save(i2);
+        /*session.save(i2);
         session.save(i3);
         session.save(o1);
-        session.save(o2);
+        session.save(o2);*/
 
 
         transaction.commit();
