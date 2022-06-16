@@ -1,5 +1,6 @@
 import lk.ijse.supermarket_orm.entity.Item;
 import lk.ijse.supermarket_orm.entity.Order;
+import lk.ijse.supermarket_orm.entity.OrderDetail;
 import lk.ijse.supermarket_orm.util.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -7,6 +8,8 @@ import org.hibernate.Transaction;
 import java.util.ArrayList;
 
 public class AppInitializer {
+    private static Object Item;
+
     public static void main(String[] args) {
 
       /*Customer c1 = new Customer();
@@ -57,6 +60,9 @@ public class AppInitializer {
         o1.setItemList(itemList);
         o2.setItemList(itemList);*/
 
+        OrderDetail od1 = new OrderDetail();
+        od1.setId("OD-001");
+        od1.setQty(1);
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -74,6 +80,7 @@ public class AppInitializer {
         session.save(o1);
         session.save(o2);*/
 
+        session.save(od1);
 
         transaction.commit();
         session.close();
